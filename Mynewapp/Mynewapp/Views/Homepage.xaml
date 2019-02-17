@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+                  prism:ViewModelLocator.AutowireViewModel="True"
+                  x:Class="Mynewapp.Views.Homepage" Title="newpage">
+
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menus">
+            <StackLayout Padding="20">
+                <Label Text="This is master"/>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <ContentPage>
+            <StackLayout>
+                <Label Text="This is details" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
+                <Label Text="HOMEManu" HorizontalOptions="Start" VerticalOptions="Center">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped">
+                            
+                        </TapGestureRecognizer>
+                    </Label.GestureRecognizers>
+                </Label>
+
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Detail>  
+</MasterDetailPage>
